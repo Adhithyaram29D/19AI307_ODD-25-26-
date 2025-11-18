@@ -42,8 +42,9 @@ public class Main{
 ```
 
 ## OUTPUT:
-<img width="973" height="247" alt="image" src="https://github.com/user-attachments/assets/62481bfc-a000-43c2-8411-ec2c1aad5d74" />
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/62481bfc-a000-43c2-8411-ec2c1aad5d74" />
 
 ## RESULT:
 
 Thus the Java program that does post-decrement and pre-decrement operators are executed successfully.
+
