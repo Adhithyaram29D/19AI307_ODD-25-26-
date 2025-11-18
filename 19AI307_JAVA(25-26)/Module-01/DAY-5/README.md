@@ -49,9 +49,10 @@ public class Main{
 ```
 
 ## OUTPUT:
-<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/dcea1147-b3c3-4810-acba-dd9f69870b25" />
+<img width="500" height="500" alt="image" src="https://github.com/user-attachments/assets/dcea1147-b3c3-4810-acba-dd9f69870b25" />
 
 ## RESULT:
 
 Thus the program that reads two strings and compares them is executed successfully.
+
 
