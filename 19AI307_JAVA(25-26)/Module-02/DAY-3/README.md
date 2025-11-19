@@ -87,11 +87,12 @@ public class prog {
 ```
 
 ## OUTPUT:
-<img width="826" height="465" alt="image" src="https://github.com/user-attachments/assets/972c4fcf-d9d0-43f8-bc30-518764a4d55e" />
+<img width="600" height="600" alt="image" src="https://github.com/user-attachments/assets/972c4fcf-d9d0-43f8-bc30-518764a4d55e" />
 
 
 
 ## RESULT:
 Therfore the program successfully stores account details using setter methods and retrieves them using getter methods.
+
 
 
