@@ -35,8 +35,8 @@ To write a Java program that defines a class BankAccount with private attributes
  ```
 /*
 Program to implement a Access Specifiers using Java
-Developed by: Adhithya Ram D
-Register Number: 212222230008
+Developed by: SANJAYKUMAR N B
+RegisterNumber: 212223230189
 */
 ```
 
@@ -93,6 +93,7 @@ public class prog {
 
 ## RESULT:
 Therfore the program successfully stores account details using setter methods and retrieves them using getter methods.
+
 
 
 
