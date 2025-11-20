@@ -1,27 +1,36 @@
 # Ex.No:5(E) MULTITHREADING -SYNCHRONIZATION
 
 ## QUESTION:
-Maintain two int variables a and b, read their initial values from user. Use synchronized block to swap them and print swapped values.
+Use a thread pool to calculate and print the square of each number from input.
 
-Input:
+Input :
 
-Two lines: a and b values
-
+3 2 4 5
 Output:
 
-a = <swapped_a>
+Square: 4
 
-b = <swapped_b>
+Square: 16
+
+Square: 25
+
 
 ## AIM:
-To demonstrate the use of a synchronized block for safely swapping two integer variables.
-
+To write a Java program that calculates and prints the square of n input numbers using a Thread Pool (ExecutorService).
 ## ALGORITHM :
-1.	Read two integer values a and b from the user.
-2.	Create a lock object for synchronization.
-3.	Use a synchronized(lock) block to perform the swapping.
-4.	Swap values using a temporary variable.
-5.	Print the swapped values of a and b.
+1. Start the program and import the necessary java.util and java.util.concurrent packages.
+
+2. Initialize a Scanner object to read input from the user.
+
+3. Read an integer n which represents the count of numbers to be processed.
+
+4. Create a thread pool using Executors.newSingleThreadExecutor().
+
+5. Loop n times: Read the next integer from the input.
+
+6. Define a Runnable task using a lambda expression that calculates the square of the number and prints it.
+
+7. Shutdown the executor service to free up resources and close the scanner.
 
 ## PROGRAM:
  ```
@@ -35,51 +44,40 @@ Register Number: 212222230008
 ## SOURCE CODE:
 ```java
 import java.util.Scanner;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
-public class SwapSynchronized {
-    private int a;
-    private int b;
-
-    public SwapSynchronized(int a, int b) {
-        this.a = a;
-        this.b = b;
-    }
-
-    public void swap() {
-        Object lock = new Object(); // lock object for synchronization
-        synchronized (lock) {
-            int temp = a;
-            a = b;
-            b = temp;
-        }
-    }
-
-    public void printValues() {
-        System.out.println("a = " + a);
-        System.out.println("b = " + b);
-    }
+public class SquareCalculator {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
 
-        int a = Integer.parseInt(sc.nextLine());
-        int b = Integer.parseInt(sc.nextLine());
+        ExecutorService executor = Executors.newSingleThreadExecutor();
 
-        SwapSynchronized swapper = new SwapSynchronized(a, b);
-        swapper.swap();
-        swapper.printValues();
+        for (int i = 0; i < n; i++) {
+            final int numberToSquare = scanner.nextInt();
 
-        sc.close();
+            Runnable task = () -> {
+                int square = numberToSquare * numberToSquare;
+                System.out.println("Square: " + square);
+            };
+
+            executor.submit(task);
+        }
+
+        executor.shutdown();
+        scanner.close();
     }
 }
 ```
 
 ## OUTPUT:
-<img width="1315" height="352" alt="image" src="https://github.com/user-attachments/assets/4ac75d2b-e703-4ae2-9edb-c22bc5dc3b45" />
+<img width="405" height="454" alt="image" src="https://github.com/user-attachments/assets/f7711603-99de-46a9-a22e-bcbd6af72d9f" />
 
 
 ## RESULT:
-The program successfully swaps the two integers inside a synchronized block and displays the swapped values safely.
+The program was executed successfully. The squares of the numbers were calculated using a thread pool and printed to the console.
 
 
 
