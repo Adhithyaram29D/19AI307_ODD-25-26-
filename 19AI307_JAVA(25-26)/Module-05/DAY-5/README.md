@@ -77,7 +77,8 @@ public class SquareCalculator {
 
 
 ## RESULT:
-The program was executed successfully. The squares of the numbers were calculated using a thread pool and printed to the console.
+The program was executed successfully as the squares of the numbers were calculated using a thread pool and printed to the console.
+
 
 
 
